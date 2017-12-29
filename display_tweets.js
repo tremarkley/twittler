@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    var $body = $('body');
-    $body.html('');
+    //var $body = $('body');
+    //$body.html('');
     var indexTracker = {'startingIndex': 0};
       window.setInterval(function(){
           displayNTweets(indexTracker, Math.floor(Math.random()*20 + 1));
@@ -27,7 +27,7 @@ $(document).ready(function(){
 
   function printTweet(tweet)
   {
-    var $body = $('body');
+    var $timeline = $('.timeline');
     var $tweet = $("<div>", { "class" : "tweet" });
     var $tweetUser = $("<h3>", { "class" : "tweetUser" });
     var $tweetMessage = $("<p>", { "class" : "tweetMessage" });
@@ -40,5 +40,5 @@ $(document).ready(function(){
     $tweetFooter.appendTo($tweet);
     $tweetTimeStamp.text(tweet.created_at);
     $tweetTimeStamp.appendTo($tweetFooter);
-    $tweet.appendTo($body);
+    $tweet.appendTo($timeline);
   }

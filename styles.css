@@ -58,3 +58,8 @@ body {
     line-height: 20px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+
+.timeline {
+    max-width: 800px;
+    margin: 1px auto;
+}
