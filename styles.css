@@ -75,3 +75,9 @@ body {
 .tweet:first-child {
     border-top: 1px solid #d3d3d3;
 }
+
+.tweetUser {
+    font-weight: bold;
+    float: left;
+    margin-right: 5px;
+}

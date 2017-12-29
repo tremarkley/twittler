@@ -29,16 +29,16 @@ $(document).ready(function(){
   {
     var $timeline = $('.timeline');
     var $tweet = $("<div>", { "class" : "tweet" });
+    var $tweetHeader = $("<div>");
     var $tweetUser = $("<h3>", { "class" : "tweetUser" });
     var $tweetMessage = $("<p>", { "class" : "tweetMessage" });
-    var $tweetFooter = $("<footer>");
     var $tweetTimeStamp = $("<p>", { "class" : "tweetTimestamp" });
+    $tweetHeader.appendTo($tweet);
     $tweetUser.text('@' + tweet.user);
-    $tweetUser.appendTo($tweet);
+    $tweetUser.appendTo($tweetHeader);
+    $tweetTimeStamp.text(tweet.created_at);
+    $tweetTimeStamp.appendTo($tweetHeader);
     $tweetMessage.text(tweet.message);
     $tweetMessage.appendTo($tweet);
-    $tweetFooter.appendTo($tweet);
-    $tweetTimeStamp.text(tweet.created_at);
-    $tweetTimeStamp.appendTo($tweetFooter);
     $tweet.appendTo($timeline);
   }
