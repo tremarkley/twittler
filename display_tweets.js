@@ -40,5 +40,5 @@ $(document).ready(function(){
     $tweetTimeStamp.appendTo($tweetHeader);
     $tweetMessage.text(tweet.message);
     $tweetMessage.appendTo($tweet);
-    $tweet.appendTo($timeline);
+    $tweet.prependTo($timeline);
   }
