@@ -28,7 +28,17 @@ $(document).ready(function(){
   function printTweet(tweet)
   {
     var $body = $('body');
-    var $tweet = $('<div></div>');
-    $tweet.text('@' + tweet.user + ': ' + tweet.message);
+    var $tweet = $("<div>", { "class" : "tweet" });
+    var $tweetUser = $("<h3>", { "class" : "tweetUser" });
+    var $tweetMessage = $("<p>", { "class" : "tweetMessage" });
+    var $tweetFooter = $("<footer>");
+    var $tweetTimeStamp = $("<p>", { "class" : "tweetTimestamp" });
+    $tweetUser.text('@' + tweet.user);
+    $tweetUser.appendTo($tweet);
+    $tweetMessage.text(tweet.message);
+    $tweetMessage.appendTo($tweet);
+    $tweetFooter.appendTo($tweet);
+    $tweetTimeStamp.text(tweet.created_at);
+    $tweetTimeStamp.appendTo($tweetFooter);
     $tweet.appendTo($body);
   }
