@@ -4,7 +4,7 @@ $(document).ready(function(){
     var indexTracker = {'startingIndex': 0};
       window.setInterval(function(){
           displayNTweets(indexTracker, Math.floor(Math.random()*20 + 1));
-      }, (Math.random() * 10000) + 10)
+      }(), (Math.random() * 10000) + 10)
 });
 
   function displayNTweets(indexObj, numberofTweetsToDisplay)
