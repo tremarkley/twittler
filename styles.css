@@ -71,6 +71,7 @@ body {
 .nav-buttons {
     float: left;
     width: 45%;
+    padding-top: 10px;
 }
 
 .nav-actions {
@@ -81,6 +82,18 @@ body {
 .center-icon {
     margin: 0 45%;
 }
+
+.fa-home.med {
+    font-size: 30px;
+    display: inline;
+ }
+ 
+ .iconText {
+     display: inline;
+     margin-left: 5px;
+     position: absolute;
+     bottom: 12px;
+ }
 
 .timeline {
     max-width: 800px;
@@ -115,3 +128,4 @@ body {
 .tweetTimestamp {
     color: #808080
 }
+
