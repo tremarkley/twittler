@@ -32,3 +32,16 @@ function printTweet(tweet)
     $tweetMessage.appendTo($tweet);
     $tweet.prependTo($timeline);
 }
+
+function getURLParamValue(inputParam){
+    var pageUrl = window.location.search.substring(1);
+    var paramArray = pageUrl.split('&')
+    for (let i = 0; i < paramArray.length; i++){
+        var param = paramArray[i].split('=')[0];
+        var paramValue = paramArray[i].split('=')[1];
+        if (param === inputParam) {
+            return paramValue;
+        }
+    }
+    return undefined;
+}
