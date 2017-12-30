@@ -1,23 +1,22 @@
 function displayNTweets(indexObj, numberofTweetsToDisplay)
-  {
-      var startingIndex = indexObj.startingIndex;
-      console.log(startingIndex);
-      var tweetsAvailable = streams.home.length - startingIndex;
-      if (tweetsAvailable < numberofTweetsToDisplay)
-      {
+{
+    var startingIndex = indexObj.startingIndex;
+    var tweetsAvailable = streams.home.length - startingIndex;
+    if (tweetsAvailable < numberofTweetsToDisplay)
+    {
         numberofTweetsToDisplay = tweetsAvailable;
-      }
-      var endingIndex = startingIndex + numberofTweetsToDisplay;
-      for (let i = startingIndex; i < endingIndex; i++)
-      {
+    }
+    var endingIndex = startingIndex + numberofTweetsToDisplay;
+    for (let i = startingIndex; i < endingIndex; i++)
+    {
         var tweet = streams.home[i];
         printTweet(tweet);
-      }
-      indexObj.startingIndex = endingIndex;
-  }
+    }
+    indexObj.startingIndex = endingIndex;
+}
 
-  function printTweet(tweet)
-  {
+function printTweet(tweet)
+{
     var $timeline = $('.timeline');
     var $tweet = $("<div>", { "class" : "tweet" });
     var $tweetHeader = $("<div>");
@@ -32,4 +31,4 @@ function displayNTweets(indexObj, numberofTweetsToDisplay)
     $tweetMessage.text(tweet.message);
     $tweetMessage.appendTo($tweet);
     $tweet.prependTo($timeline);
-  }
+}
