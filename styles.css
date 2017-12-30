@@ -68,13 +68,28 @@ body {
     top: 0px;
 }
 
+.nav-buttons {
+    float: left;
+    width: 45%;
+}
+
+.nav-actions {
+    width: 45%;
+    float: right;
+}
+
+.center-icon {
+    margin: 0 45%;
+}
+
 .timeline {
-    
+    max-width: 800px;
+    margin: 10px auto;
 }
 
 .centered {
-    max-width: 800px;
-    margin: 10px auto;
+    width: 800px;
+    margin: 0 auto;
 }
 
 .tweet {
