@@ -83,7 +83,7 @@ body {
     margin: 0 45%;
 }
 
-.fa-home.med {
+.fa.med {
     font-size: 30px;
     display: inline;
  }
@@ -91,8 +91,8 @@ body {
  .iconText {
      display: inline;
      margin-left: 5px;
-     position: absolute;
-     bottom: 12px;
+     position: relative;
+     top: -3px;
  }
 
 .timeline {
