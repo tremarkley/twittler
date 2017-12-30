@@ -28,7 +28,7 @@ $(document).ready(function(){
     var $timeline = $('.timeline');
     var $tweet = $("<div>", { "class" : "tweet" });
     var $tweetHeader = $("<div>");
-    var $tweetUser = $("<h3>", { "class" : "tweetUser" });
+    var $tweetUser = $("<a>", { "class" : "tweetUser", "href" : "./user.html?user=" + tweet.user });
     var $tweetMessage = $("<p>", { "class" : "tweetMessage" });
     var $tweetTimeStamp = $("<p>", { "class" : "tweetTimestamp" });
     $tweetHeader.appendTo($tweet);
