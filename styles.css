@@ -74,6 +74,11 @@ body {
     padding-top: 10px;
 }
 
+.div-nav-button {
+    display: inline;
+    margin-right: 10px;
+}
+
 .nav-actions {
     width: 45%;
     float: right;
