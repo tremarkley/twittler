@@ -84,8 +84,40 @@ body {
     float: right;
 }
 
+.search-container {
+    float: left;
+    margin-left: 15%;
+    padding: 3% 0;
+}
+
+.search-box {
+    background-color: #f5f8fa;
+    border: 1px solid #e6ecf0;
+    width: 200px;
+    border-radius: 15px;
+    height: 25px;
+    padding: 0 0 0 5px;
+}
+
+.search-box:focus {
+    border: 2px solid #1DA1F2;
+    background-color: #fff;
+    box-shadow: none;
+    outline: none;
+}
+
+.tweet-container {
+    float: right;
+    padding: 4% 0;
+}
+
+/*.tweet-button {
+    float: right;
+}*/
+
 .center-icon {
     margin: 0 45%;
+    text-align: center;
 }
 
 .fa.med {
@@ -98,6 +130,13 @@ body {
      margin-left: 5px;
      position: relative;
      top: -3px;
+ }
+
+
+
+ .twitter-icon {
+     width: 40px;
+     height: auto;
  }
 
 .timeline {
