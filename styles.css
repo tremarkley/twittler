@@ -111,3 +111,7 @@ body {
     text-decoration: none;
     color: black;
 }
+
+.tweetTimestamp {
+    color: #808080
+}
