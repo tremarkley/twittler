@@ -108,12 +108,22 @@ body {
 
 .tweet-container {
     float: right;
-    padding: 4% 0;
+    padding: 3% 0;
 }
 
-/*.tweet-button {
-    float: right;
-}*/
+.tweet-button {
+    font-weight: bold;
+    background-color: #4AB3F4;
+    border-radius: 15px;
+    color: #fff;
+    height: 27px;
+    width: 65px;
+    outline: none;
+}
+
+.tweet-button:hover{
+    cursor: pointer;
+}
 
 .center-icon {
     margin: 0 45%;
