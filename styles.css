@@ -228,10 +228,30 @@ Modal
 }
 
 .modal-content {
+    border-radius: 5px;
     background-color: #fff;
     margin: auto;
-    padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 50%;
+}
+
+.modal-content-header {
+    text-align: center;
+    border-bottom: 1px solid #808080;
+    overflow: auto; /* makes it so div sizes to the size of the icon*/
+}
+
+.modal-content-header-text {
+   display: inline;
+}
+
+.modal-close-icon {
+    float: right;
+    font-size: 25px;
+    color: #808080;
+}
+
+.modal-close-icon:hover {
+    cursor: pointer;
 }
 

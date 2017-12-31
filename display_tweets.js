@@ -51,16 +51,24 @@ function tweetModal(){
     var modalID = "tweetModal";
     var $modal = $("<div>", { "id" : modalID, "class" : "modal" });
     var $modalContent = $("<div>", { "class" : "modal-content" });
+    var $modalContentHeader = $("<div>", { "class" : "modal-content-header"});
+    var $modalContentHeaderText = $("<h3>", {"class" : "modal-content-header-text"});
+    var $modalCloseI = $("<i>", {"class" : "modal-close-icon fa fa-times"});
     var $modalText = $("<p>");
     var $modalCloseButton = $("<button>", {"id" : "close-modal"});
+    $modalContentHeaderText.text('Compose a Tweet');
+    $modalContentHeaderText.appendTo($modalContentHeader);
+    $modalCloseI.appendTo($modalContentHeader);
     $modalCloseButton.text('Close');
     $modalText.text('Test Modal');
+    $modalContentHeader.appendTo($modalContent);
     $modalText.appendTo($modalContent);
     $modalCloseButton.appendTo($modalContent);
     $modalContent.appendTo($modal);
     $modal.appendTo($body);
 
     $('#close-modal').on('click', onModalClose);
+    $('.modal-close-icon').on('click', onModalClose);
     $(window).on('click', function(event) {
         if (event.target.id == modalID) {
             onModalClose();
