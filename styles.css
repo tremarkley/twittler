@@ -83,6 +83,11 @@ body {
     box-sizing: border-box;
 }
 
+.div-nav-button a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .div-nav-button:hover, .div-nav-button.active {
     cursor: pointer;
     color: #1DA1F2;
