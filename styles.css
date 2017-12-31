@@ -286,3 +286,8 @@ Modal
     float: right;
 }
 
+.modal-tweet-button[disabled]{
+   cursor: default;
+   opacity: .3;
+}
+

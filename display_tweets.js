@@ -73,6 +73,7 @@ function tweetModal(){
     $modalTweetButtonDiv.appendTo($modalForm);
     var $modalTweetButton = $("<button>", {"class" : "modal-tweet-button tweet-button"});
     $modalTweetButton.text('Tweet');
+    $modalTweetButton.prop("disabled", true);
     $modalTweetButton.appendTo($modalTweetButtonDiv);
     
     $modalContent.appendTo($modal);
@@ -85,8 +86,21 @@ function tweetModal(){
             onModalClose();
         }
     })
+
+    $('.tweet-input').on('keyup', toggleButton);
 }
 
 function onModalClose() {
     $('.modal').remove();
+}
+
+function toggleButton() {
+    var charLength = $('.tweet-input').val().length;
+    if (charLength > 0)
+    {
+        $('.modal-tweet-button').removeProp("disabled");
+    }
+    else {
+        $('.modal-tweet-button').prop("disabled", true);
+    }
 }
