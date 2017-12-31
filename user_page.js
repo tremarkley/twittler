@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    $('.tweet-button').on('click', tweetModal);
     var userTweets = {};
     //get user info from localStorage if it exists
     if (localStorage.getItem('userTweets') !== undefined)
