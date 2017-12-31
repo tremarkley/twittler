@@ -45,3 +45,29 @@ function getURLParamValue(inputParam){
     }
     return undefined;
 }
+
+function tweetModal(){
+    var $body = $('body');
+    var modalID = "tweetModal";
+    var $modal = $("<div>", { "id" : modalID, "class" : "modal" });
+    var $modalContent = $("<div>", { "class" : "modal-content" });
+    var $modalText = $("<p>");
+    var $modalCloseButton = $("<button>", {"id" : "close-modal"});
+    $modalCloseButton.text('Close');
+    $modalText.text('Test Modal');
+    $modalText.appendTo($modalContent);
+    $modalCloseButton.appendTo($modalContent);
+    $modalContent.appendTo($modal);
+    $modal.appendTo($body);
+
+    $('#close-modal').on('click', onModalClose);
+    $(window).on('click', function(event) {
+        if (event.target.id == modalID) {
+            onModalClose();
+        }
+    })
+}
+
+function onModalClose() {
+    $('.modal').remove();
+}
