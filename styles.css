@@ -59,6 +59,10 @@ body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+/*********
+Nav Bar
+**********/
+
 .global-nav {
     background: #fff;
     height: 50px;
@@ -163,6 +167,10 @@ body {
      height: auto;
  }
 
+ /*******
+ Timeline
+ ********/
+
 .timeline {
     max-width: 800px;
     margin: 10px auto;
@@ -172,6 +180,10 @@ body {
     width: 800px;
     margin: 0 auto;
 }
+
+/********
+Tweets
+*********/
 
 .tweet {
     background: #fff;
@@ -197,6 +209,10 @@ body {
     color: #808080;
     display: inline;
 }
+
+/******
+Modal
+******/
 
 .modal {
     width: 100%;
