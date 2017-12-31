@@ -51,19 +51,30 @@ function tweetModal(){
     var modalID = "tweetModal";
     var $modal = $("<div>", { "id" : modalID, "class" : "modal" });
     var $modalContent = $("<div>", { "class" : "modal-content" });
+
     var $modalContentHeader = $("<div>", { "class" : "modal-content-header"});
+    $modalContentHeader.appendTo($modalContent);
     var $modalContentHeaderText = $("<h3>", {"class" : "modal-content-header-text"});
-    var $modalCloseI = $("<i>", {"class" : "modal-close-icon fa fa-times"});
-    var $modalText = $("<p>");
-    var $modalCloseButton = $("<button>", {"id" : "close-modal"});
     $modalContentHeaderText.text('Compose a Tweet');
     $modalContentHeaderText.appendTo($modalContentHeader);
+
+    var $modalCloseI = $("<i>", {"class" : "modal-close-icon fa fa-times"});
     $modalCloseI.appendTo($modalContentHeader);
-    $modalCloseButton.text('Close');
-    $modalText.text('Test Modal');
-    $modalContentHeader.appendTo($modalContent);
-    $modalText.appendTo($modalContent);
-    $modalCloseButton.appendTo($modalContent);
+
+    var $modalContentBody = $("<div>", { "class" : "modal-body" });
+    $modalContentBody.appendTo($modalContent);
+
+    var $modalForm = $("<form>", {"class" : "tweet-form"});
+    $modalForm.appendTo($modalContentBody);
+    var $modalTextInput = $("<textarea>", {"class": "tweet-input", "rows" : "3", "placeholder": "Write a tweet...", "maxlength" : 140});
+    $modalTextInput.appendTo($modalForm);
+
+    var $modalTweetButtonDiv = $("<div>", {"class" : "modal-tweet-button-div"});
+    $modalTweetButtonDiv.appendTo($modalForm);
+    var $modalTweetButton = $("<button>", {"class" : "modal-tweet-button tweet-button"});
+    $modalTweetButton.text('Tweet');
+    $modalTweetButton.appendTo($modalTweetButtonDiv);
+    
     $modalContent.appendTo($modal);
     $modal.appendTo($body);
 

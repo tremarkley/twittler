@@ -228,21 +228,24 @@ Modal
 }
 
 .modal-content {
-    border-radius: 5px;
+    border-radius: 15px;
     background-color: #fff;
     margin: auto;
     border: 1px solid #888;
-    width: 50%;
+    width: 40%;
 }
 
 .modal-content-header {
     text-align: center;
     border-bottom: 1px solid #808080;
     overflow: auto; /* makes it so div sizes to the size of the icon*/
+    padding: 10px 10px;
 }
 
 .modal-content-header-text {
    display: inline;
+   font-weight: bold;
+   font-size: 16px;
 }
 
 .modal-close-icon {
@@ -253,5 +256,33 @@ Modal
 
 .modal-close-icon:hover {
     cursor: pointer;
+}
+
+.modal-body {
+    background: #e6ecf0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.tweet-form {
+    padding: 2%;
+}
+
+.tweet-input {
+    width: 98%;
+    outline: none;
+    resize: none;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 2px solid #A4D9F9;
+}
+
+.modal-tweet-button-div {
+    overflow: hidden;
+    margin: 5px 0 0 0;
+}
+
+.modal-tweet-button {
+    float: right;
 }
 
