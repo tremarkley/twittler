@@ -129,6 +129,7 @@ body {
     height: 27px;
     width: 65px;
     outline: none;
+    border: none;
 }
 
 .tweet-button:hover{
