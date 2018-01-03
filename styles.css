@@ -104,8 +104,8 @@ Nav Bar
 }
 
 .search-container {
-    float: left;
-    margin-left: 15%;
+    float: right;
+    margin-right: 5%;
     padding: 3% 0;
 }
 
