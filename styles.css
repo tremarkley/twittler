@@ -171,14 +171,58 @@ Nav Bar
  Timeline
  ********/
 
-.timeline {
-    max-width: 800px;
-    margin: 10px auto;
+.centered {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.centered {
-    width: 800px;
-    margin: 0 auto;
+.timeline, .sidebar {
+    margin: 10px 0 0 0;
+}
+
+.timeline {
+    float: right;
+    width: 65%;
+}
+
+.sidebar {
+    float: left;
+    width: 33%;
+}
+
+.profile-info {
+    background: #fff;
+    height: 200px;
+}
+
+.profile-background {
+    background: #1DA1F2;
+    height: 45%;
+}
+
+.user-info, .follower-info {
+    text-align: center;
+}
+
+.follower-info {
+    padding-top: 10px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.your-handle {
+    color: #808080;
+}
+
+.tweets, .following, .followers {
+    display: inline-block;
+    padding-right: 7px;
+}
+
+h4 {
+    font-weight: bold;
 }
 
 /********
