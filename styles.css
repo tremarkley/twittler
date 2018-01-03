@@ -234,7 +234,7 @@ Tweets
     border-bottom: 1px solid #d3d3d3;
     border-left: 1px solid #d3d3d3;
     border-right: 1px solid #d3d3d3;
-    padding: 10px 5px 10px 5px;
+    padding: 10px 5px 10px 10%;
 }
 
 .tweet:first-child {
