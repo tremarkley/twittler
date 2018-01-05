@@ -88,6 +88,7 @@ function tweetModal(){
     })
 
     $('.tweet-input').on('keyup', toggleButton);
+    $('.tweet-button').on('click', onTweetButtonClick);
 }
 
 function onModalClose() {
@@ -103,4 +104,19 @@ function toggleButton() {
     else {
         $('.modal-tweet-button').prop("disabled", true);
     }
+}
+
+function onTweetButtonClick() {
+    event.preventDefault();
+    var message = $('.tweet-input').val();
+    composeTweet(message);
+    onModalClose();
+}
+
+function composeTweet(tweetText) {
+    visitor = "harrymarkley";
+    if (streams.users[visitor] == undefined){ 
+        streams.users[visitor] = [];
+    }
+    writeTweet(tweetText);
 }
