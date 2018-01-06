@@ -1,3 +1,9 @@
+//setup visitor
+visitor = 'harrymarkley';
+if (streams.users[visitor] == undefined){ 
+    streams.users[visitor] = [];
+}
+
 function displayNTweets(indexObj, numberofTweetsToDisplay, tweets)
 {
     var startingIndex = indexObj.startingIndex;
@@ -10,6 +16,17 @@ function displayNTweets(indexObj, numberofTweetsToDisplay, tweets)
     for (let i = startingIndex; i < endingIndex; i++)
     {
         var tweet = tweets[i];
+        printTweetToTimeline(tweet);
+    }
+    indexObj.startingIndex = endingIndex;
+}
+
+function displayTweetsByUser(indexObj, user) {
+    var startingIndex = indexObj.startingIndex
+    var endingIndex = streams.users[user].length;
+    for (let i = startingIndex; i < endingIndex; i++)
+    {
+        var tweet = streams.users[user][i];
         printTweetToTimeline(tweet);
     }
     indexObj.startingIndex = endingIndex;
@@ -114,7 +131,6 @@ function onTweetButtonClick() {
 }
 
 function composeTweet(tweetText) {
-    visitor = "harrymarkley";
     if (streams.users[visitor] == undefined){ 
         streams.users[visitor] = [];
     }

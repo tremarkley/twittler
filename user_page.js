@@ -6,12 +6,17 @@ $(document).ready(function() {
     {
         userTweets = JSON.parse(localStorage.getItem('userTweets'));
         console.log(userTweets);
-    }else {
+    } else {
         userTweets = streams.users;
     }
     var user = getURLParamValue('user');
     userTweets = userTweets[user];
-    var indexObj = {'startingIndex' : 0};
     var numTweetsAvailable = userTweets.length;
-    displayNTweets(indexObj, numTweetsAvailable, userTweets);
+    //display all user tweets stored in local storage to start
+    displayNTweets({'startingIndex' : 0}, numTweetsAvailable, userTweets);
+    var indexObj = {'startingIndex': 0};
+      window.setInterval(function display(){
+          displayTweetsByUser(indexObj, user);
+          return display;
+      }(), (Math.random() * 10000) + 10);
 });
