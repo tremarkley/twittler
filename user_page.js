@@ -1,11 +1,11 @@
 $(document).ready(function() {
-    updateTotalTweets();
+    updateTotalTweets(true);
     $('.tweet-button').on('click', tweetModal);
     var userTweets = {};
     //get user info from localStorage if it exists
     if (localStorage.getItem('userTweets') !== undefined)
     {
-        userTweets = JSON.parse(localStorage.getItem('userTweets'));
+        userTweets = JSON.parse(localStorage.getItem('userTweets')).users;
     } else {
         userTweets = streams.users;
     }
