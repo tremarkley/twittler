@@ -88,7 +88,7 @@ function tweetModal(){
     })
 
     $('.tweet-input').on('keyup', toggleButton);
-    $('.tweet-button').on('click', onTweetButtonClick);
+    $('.modal-tweet-button').on('click', onTweetButtonClick);
 }
 
 function onModalClose() {
