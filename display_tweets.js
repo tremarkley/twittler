@@ -4,6 +4,17 @@ if (streams.users[visitor] == undefined){
     streams.users[visitor] = [];
 }
 
+
+function updateTotalTweets() {
+    var userTweetsStorage = 0;
+    if (localStorage.getItem('userTweets') !== undefined)
+    {
+        userTweetsStorage = JSON.parse(localStorage.getItem('userTweets'))[visitor].length;
+    }
+    var totalTweets = streams.users[visitor].length + userTweetsStorage;
+    $('#totalTweets').text(totalTweets);
+}
+
 function displayNTweets(indexObj, numberofTweetsToDisplay, tweets)
 {
     var startingIndex = indexObj.startingIndex;
@@ -128,6 +139,7 @@ function onTweetButtonClick() {
     var message = $('.tweet-input').val();
     composeTweet(message);
     onModalClose();
+    updateTotalTweets();
 }
 
 function composeTweet(tweetText) {

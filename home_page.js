@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    updateTotalTweets();
     $('#home-button').addClass('active');
     $('.tweet-button').on('click', tweetModal);
     var indexTracker = {'startingIndex': 0};

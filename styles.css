@@ -216,7 +216,7 @@ Nav Bar
     color: #808080;
 }
 
-.tweets, .following, .followers {
+#totalTweetsDiv, #totalFollowing, #totalFollowers {
     display: inline-block;
     padding-right: 7px;
 }
